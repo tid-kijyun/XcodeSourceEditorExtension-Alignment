@@ -2,19 +2,7 @@
 
 This Xcode source editor extension align your assignment statement.
 
-```
-// before:
-var hoge = "hoge"
-var foo = "foo"
-var awosome = ""
-```
-
-```
-// after:
-var hoge    = "hoge"
-var foo     = "foo"
-var awosome = ""
-```
+![c](https://cloud.githubusercontent.com/assets/1665104/16098992/e9e177ac-3390-11e6-8204-40a1ab2a2a37.gif)
 
 ## Usage:
 
