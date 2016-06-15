@@ -1,6 +1,6 @@
 # Alignment
 
-Align the assignment statement.
+This Xcode source editor extension align your assignment statement.
 
 ```
 // before:
