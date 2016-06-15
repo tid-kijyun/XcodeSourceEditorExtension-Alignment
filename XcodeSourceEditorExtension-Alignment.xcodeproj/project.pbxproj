@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E6C02941D11C98C004D2B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02931D11C98C004D2B5E /* AppDelegate.swift */; };
+		1E6C02961D11C98C004D2B5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02951D11C98C004D2B5E /* ViewController.swift */; };
+		1E6C02981D11C98C004D2B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C02971D11C98C004D2B5E /* Assets.xcassets */; };
+		1E6C029B1D11C98D004D2B5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C02991D11C98D004D2B5E /* Main.storyboard */; };
+		1E6C02A91D11C995004D2B5E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C02A81D11C995004D2B5E /* Cocoa.framework */; };
+		1E6C02AE1D11C995004D2B5E /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02AD1D11C995004D2B5E /* SourceEditorExtension.swift */; };
+		1E6C02B01D11C995004D2B5E /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02AF1D11C995004D2B5E /* SourceEditorCommand.swift */; };
+		1E6C02B41D11C995004D2B5E /* Alignment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E6C02A61D11C995004D2B5E /* Alignment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E6C02B21D11C995004D2B5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E6C02881D11C98C004D2B5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6C02A51D11C995004D2B5E;
+			remoteInfo = Alignment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E6C02B81D11C995004D2B5E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E6C02B41D11C995004D2B5E /* Alignment.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XcodeSourceEditorExtension-Alignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6C02931D11C98C004D2B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E6C02951D11C98C004D2B5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1E6C02971D11C98C004D2B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E6C029A1D11C98D004D2B5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E6C029C1D11C98D004D2B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E6C02A61D11C995004D2B5E /* Alignment.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Alignment.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6C02A81D11C995004D2B5E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1E6C02AC1D11C995004D2B5E /* Alignment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Alignment.entitlements; sourceTree = "<group>"; };
+		1E6C02AD1D11C995004D2B5E /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		1E6C02AF1D11C995004D2B5E /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		1E6C02B11D11C995004D2B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E6C028D1D11C98C004D2B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6C02A31D11C995004D2B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6C02A91D11C995004D2B5E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E6C02871D11C98C004D2B5E = {
+			isa = PBXGroup;
+			children = (
+				1E6C02921D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */,
+				1E6C02AA1D11C995004D2B5E /* Alignment */,
+				1E6C02A71D11C995004D2B5E /* Frameworks */,
+				1E6C02911D11C98C004D2B5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E6C02911D11C98C004D2B5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */,
+				1E6C02A61D11C995004D2B5E /* Alignment.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E6C02921D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C02931D11C98C004D2B5E /* AppDelegate.swift */,
+				1E6C02951D11C98C004D2B5E /* ViewController.swift */,
+				1E6C02971D11C98C004D2B5E /* Assets.xcassets */,
+				1E6C02991D11C98D004D2B5E /* Main.storyboard */,
+				1E6C029C1D11C98D004D2B5E /* Info.plist */,
+			);
+			path = "XcodeSourceEditorExtension-Alignment";
+			sourceTree = "<group>";
+		};
+		1E6C02A71D11C995004D2B5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C02A81D11C995004D2B5E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E6C02AA1D11C995004D2B5E /* Alignment */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C02AD1D11C995004D2B5E /* SourceEditorExtension.swift */,
+				1E6C02AF1D11C995004D2B5E /* SourceEditorCommand.swift */,
+				1E6C02B11D11C995004D2B5E /* Info.plist */,
+				1E6C02AB1D11C995004D2B5E /* Supporting Files */,
+			);
+			path = Alignment;
+			sourceTree = "<group>";
+		};
+		1E6C02AB1D11C995004D2B5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C02AC1D11C995004D2B5E /* Alignment.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E6C028F1D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "XcodeSourceEditorExtension-Alignment" */;
+			buildPhases = (
+				1E6C028C1D11C98C004D2B5E /* Sources */,
+				1E6C028D1D11C98C004D2B5E /* Frameworks */,
+				1E6C028E1D11C98C004D2B5E /* Resources */,
+				1E6C02B81D11C995004D2B5E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E6C02B31D11C995004D2B5E /* PBXTargetDependency */,
+			);
+			name = "XcodeSourceEditorExtension-Alignment";
+			productName = "XcodeSourceEditorExtension-Alignment";
+			productReference = 1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E6C02A51D11C995004D2B5E /* Alignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6C02B51D11C995004D2B5E /* Build configuration list for PBXNativeTarget "Alignment" */;
+			buildPhases = (
+				1E6C02A21D11C995004D2B5E /* Sources */,
+				1E6C02A31D11C995004D2B5E /* Frameworks */,
+				1E6C02A41D11C995004D2B5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alignment;
+			productName = Alignment;
+			productReference = 1E6C02A61D11C995004D2B5E /* Alignment.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E6C02881D11C98C004D2B5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = tid;
+				TargetAttributes = {
+					1E6C028F1D11C98C004D2B5E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = DP9Q5R8635;
+						DevelopmentTeamName = "Atsushi Kiwaki";
+						ProvisioningStyle = Automatic;
+					};
+					1E6C02A51D11C995004D2B5E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = DP9Q5R8635;
+						DevelopmentTeamName = "Atsushi Kiwaki";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "XcodeSourceEditorExtension-Alignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E6C02871D11C98C004D2B5E;
+			productRefGroup = 1E6C02911D11C98C004D2B5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E6C028F1D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */,
+				1E6C02A51D11C995004D2B5E /* Alignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E6C028E1D11C98C004D2B5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6C02981D11C98C004D2B5E /* Assets.xcassets in Resources */,
+				1E6C029B1D11C98D004D2B5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6C02A41D11C995004D2B5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E6C028C1D11C98C004D2B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6C02961D11C98C004D2B5E /* ViewController.swift in Sources */,
+				1E6C02941D11C98C004D2B5E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6C02A21D11C995004D2B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E6C02AE1D11C995004D2B5E /* SourceEditorExtension.swift in Sources */,
+				1E6C02B01D11C995004D2B5E /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E6C02B31D11C995004D2B5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6C02A51D11C995004D2B5E /* Alignment */;
+			targetProxy = 1E6C02B21D11C995004D2B5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E6C02991D11C98D004D2B5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E6C029A1D11C98D004D2B5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E6C029D1D11C98D004D2B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E6C029E1D11C98D004D2B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		1E6C02A01D11C98D004D2B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1E6C02A11D11C98D004D2B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1E6C02B61D11C995004D2B5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Alignment/Alignment.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Alignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment.Alignment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1E6C02B71D11C995004D2B5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Alignment/Alignment.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Alignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment.Alignment";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "XcodeSourceEditorExtension-Alignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6C029D1D11C98D004D2B5E /* Debug */,
+				1E6C029E1D11C98D004D2B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "XcodeSourceEditorExtension-Alignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6C02A01D11C98D004D2B5E /* Debug */,
+				1E6C02A11D11C98D004D2B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E6C02B51D11C995004D2B5E /* Build configuration list for PBXNativeTarget "Alignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6C02B61D11C995004D2B5E /* Debug */,
+				1E6C02B71D11C995004D2B5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E6C02881D11C98C004D2B5E /* Project object */;
+}
