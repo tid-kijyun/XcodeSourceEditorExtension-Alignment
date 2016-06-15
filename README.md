@@ -1,4 +1,4 @@
-# XcodeSourceEditorExtension-Alignment
+# Alignment
 
 Align the assignment statement.
 
