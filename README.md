@@ -2,7 +2,7 @@
 
 This Xcode source editor extension align your assignment statement.
 
-![c](https://cloud.githubusercontent.com/assets/1665104/16098992/e9e177ac-3390-11e6-8204-40a1ab2a2a37.gif)
+![c](https://cloud.githubusercontent.com/assets/1665104/16102266/ae4a0b24-33a8-11e6-943e-9a00eb6e9802.gif)
 
 ## Usage:
 
