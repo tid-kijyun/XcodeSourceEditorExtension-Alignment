@@ -8,8 +8,6 @@ This Xcode source editor extension align your assignment statement.
 
 1. Install Xcode 8
 2. Run Xcode 8 and install additional system components
-3. Open terminal.app and execute `sudo /usr/libexec/xpccachectl` if you use macOS 10.11
-4. Reboot your mac
 5. Open this project in Xcode 8 and run the extension
 6. Choose an app to run: Xcode 8
 7. Select your code
