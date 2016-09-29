@@ -18,9 +18,11 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             return
         }
 
-        var regex: NSRegularExpression?
+        var regexLeftPart: NSRegularExpression?
+        var regexRightPart: NSRegularExpression?
         do {
-            regex = try NSRegularExpression(pattern: " *=", options: .caseInsensitive)
+            regexLeftPart = try NSRegularExpression(pattern: " *=", options: .caseInsensitive)
+            regexRightPart = try NSRegularExpression(pattern: "= *", options: .caseInsensitive)
         } catch _ {
             completionHandler(NSError(domain: "SampleExtension", code: -1, userInfo: [NSLocalizedDescriptionKey: ""]))
             return
@@ -29,7 +31,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let alignPosition = invocation.buffer.lines.enumerated().map { i, line -> Int in
             guard i >= selection.start.line && i <= selection.end.line,
                 let line = line as? String,
-                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
+                let result = regexLeftPart?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
                     return 0
             }
             return result.range.location
@@ -40,19 +42,31 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 continue
             }
 
-            let range = line.range(of: "=")
-            if range.location != NSNotFound {
-                let repeatCount = alignPosition! - range.location + 1
+            var newLineString = line as String
+            let leftPartRange = line.range(of: "=")
+            if leftPartRange.location != NSNotFound {
+                let repeatCount = alignPosition! - leftPartRange.location + 1
                 if repeatCount != 0 {
                     let whiteSpaces = String(repeating: " ", count: abs(repeatCount))
 
                     if repeatCount > 0 {
-                        invocation.buffer.lines.replaceObject(at: index, with: line.replacingOccurrences(of: "=", with: "\(whiteSpaces)="))
+                        newLineString = line.replacingOccurrences(of: "=", with: "\(whiteSpaces)=")
                     } else {
-                        invocation.buffer.lines.replaceObject(at: index, with: line.replacingOccurrences(of: "\(whiteSpaces)=", with: "="))
+                        newLineString = line.replacingOccurrences(of: "\(whiteSpaces)=", with: "=")
                     }
                 }
             }
+            
+            let newLine = newLineString as NSString
+            let rightPartRange = newLine.range(of: "=")
+            if rightPartRange.location != NSNotFound {
+                let range = NSMakeRange(rightPartRange.location, newLine.length - rightPartRange.location)
+                if let afterText = regexRightPart?.stringByReplacingMatches(in: newLineString, options: .anchored, range: range, withTemplate: "= ") {
+                    newLineString = afterText
+                }
+            }
+            
+            invocation.buffer.lines.replaceObject(at: index, with: newLineString)
         }
         
         completionHandler(nil)
