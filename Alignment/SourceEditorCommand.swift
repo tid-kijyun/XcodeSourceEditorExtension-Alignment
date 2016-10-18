@@ -20,7 +20,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
         var regex: NSRegularExpression?
         do {
-            regex = try NSRegularExpression(pattern: " *=", options: .caseInsensitive)
+            regex = try NSRegularExpression(pattern: "[^+^%^*^^^<^>^&^|^?^=^-](\\s*)(=)[^=]", options: .caseInsensitive)
         } catch _ {
             completionHandler(NSError(domain: "SampleExtension", code: -1, userInfo: [NSLocalizedDescriptionKey: ""]))
             return
@@ -32,15 +32,16 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
                     return 0
             }
-            return result.range.location
+            return result.rangeAt(1).location
             }.max()
 
         for index in selection.start.line ... selection.end.line {
-            guard let line = invocation.buffer.lines[index] as? NSString else {
+            guard let line = invocation.buffer.lines[index] as? String,
+                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
                 continue
             }
 
-            let range = line.range(of: "=")
+            let range = result.rangeAt(2)
             if range.location != NSNotFound {
                 let repeatCount = alignPosition! - range.location + 1
                 if repeatCount != 0 {
