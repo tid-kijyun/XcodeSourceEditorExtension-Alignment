@@ -13,7 +13,7 @@ This Xcode source editor extension align your assignment statement.
 2. Select your code
 3. Choose menu `Editor > Alignment`
 
-## usage without installing:
+## Usage without installing:
 
 1. Install Xcode 8
 2. Run Xcode 8 and install additional system components
