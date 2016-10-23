@@ -42,7 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XcodeSourceEditorExtension-Alignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E13EAF91DBCB6AA0057352A /* AlignmentForXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlignmentForXcode.entitlements; sourceTree = SOURCE_ROOT; };
+		1E6C02901D11C98C004D2B5E /* AlignmentForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlignmentForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6C02931D11C98C004D2B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E6C02951D11C98C004D2B5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E6C02971D11C98C004D2B5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +79,7 @@
 		1E6C02871D11C98C004D2B5E = {
 			isa = PBXGroup;
 			children = (
-				1E6C02921D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */,
+				1E6C02921D11C98C004D2B5E /* AlignmentForXcode */,
 				1E6C02AA1D11C995004D2B5E /* Alignment */,
 				1E6C02A71D11C995004D2B5E /* Frameworks */,
 				1E6C02911D11C98C004D2B5E /* Products */,
@@ -88,21 +89,23 @@
 		1E6C02911D11C98C004D2B5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */,
+				1E6C02901D11C98C004D2B5E /* AlignmentForXcode.app */,
 				1E6C02A61D11C995004D2B5E /* Alignment.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E6C02921D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */ = {
+		1E6C02921D11C98C004D2B5E /* AlignmentForXcode */ = {
 			isa = PBXGroup;
 			children = (
+				1E13EAF91DBCB6AA0057352A /* AlignmentForXcode.entitlements */,
 				1E6C02931D11C98C004D2B5E /* AppDelegate.swift */,
 				1E6C02951D11C98C004D2B5E /* ViewController.swift */,
 				1E6C02971D11C98C004D2B5E /* Assets.xcassets */,
 				1E6C02991D11C98D004D2B5E /* Main.storyboard */,
 				1E6C029C1D11C98D004D2B5E /* Info.plist */,
 			);
+			name = AlignmentForXcode;
 			path = "XcodeSourceEditorExtension-Alignment";
 			sourceTree = "<group>";
 		};
@@ -136,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E6C028F1D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */ = {
+		1E6C028F1D11C98C004D2B5E /* AlignmentForXcode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "XcodeSourceEditorExtension-Alignment" */;
+			buildConfigurationList = 1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "AlignmentForXcode" */;
 			buildPhases = (
 				1E6C028C1D11C98C004D2B5E /* Sources */,
 				1E6C028D1D11C98C004D2B5E /* Frameworks */,
@@ -150,9 +153,9 @@
 			dependencies = (
 				1E6C02B31D11C995004D2B5E /* PBXTargetDependency */,
 			);
-			name = "XcodeSourceEditorExtension-Alignment";
+			name = AlignmentForXcode;
 			productName = "XcodeSourceEditorExtension-Alignment";
-			productReference = 1E6C02901D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment.app */;
+			productReference = 1E6C02901D11C98C004D2B5E /* AlignmentForXcode.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1E6C02A51D11C995004D2B5E /* Alignment */ = {
@@ -187,6 +190,11 @@
 						DevelopmentTeam = DP9Q5R8635;
 						DevelopmentTeamName = "Atsushi Kiwaki";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					1E6C02A51D11C995004D2B5E = {
 						CreatedOnToolsVersion = 8.0;
@@ -196,7 +204,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "XcodeSourceEditorExtension-Alignment" */;
+			buildConfigurationList = 1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "AlignmentForXcode" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,7 +217,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E6C028F1D11C98C004D2B5E /* XcodeSourceEditorExtension-Alignment */,
+				1E6C028F1D11C98C004D2B5E /* AlignmentForXcode */,
 				1E6C02A51D11C995004D2B5E /* Alignment */,
 			);
 		};
@@ -366,11 +374,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AlignmentForXcode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -381,11 +390,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AlignmentForXcode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -401,7 +411,7 @@
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment.Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -418,7 +428,7 @@
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.XcodeSourceEditorExtension-Alignment.Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -428,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "XcodeSourceEditorExtension-Alignment" */ = {
+		1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "AlignmentForXcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E6C029D1D11C98D004D2B5E /* Debug */,
@@ -437,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "XcodeSourceEditorExtension-Alignment" */ = {
+		1E6C029F1D11C98D004D2B5E /* Build configuration list for PBXNativeTarget "AlignmentForXcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E6C02A01D11C98D004D2B5E /* Debug */,
