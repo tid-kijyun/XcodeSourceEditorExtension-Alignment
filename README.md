@@ -7,6 +7,10 @@ This Xcode source editor extension align your assignment statement.
 ## Install:
 [![download_on_the_mac_app_store_badge_us-uk_165x40](https://cloud.githubusercontent.com/assets/1665104/19629909/de5c7a64-99b9-11e6-88fc-2a39c8849920.png)](https://itunes.apple.com/us/app/alignment-for-xcode/id1168397789?ls=1&mt=12)
 
+![system preferences](https://cloud.githubusercontent.com/assets/1665104/19801236/5dc1dfec-9d39-11e6-8dc3-8cff3d7e9921.png)
+
+![extensions](https://cloud.githubusercontent.com/assets/1665104/19801299/a45e026e-9d39-11e6-8cec-a82f30aecd9a.png)
+
 ## Usage:
 
 1. Open your code on Xcode 8
