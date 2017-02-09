@@ -191,6 +191,9 @@
 						DevelopmentTeamName = "Atsushi Kiwaki";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -201,6 +204,11 @@
 						DevelopmentTeam = DP9Q5R8635;
 						DevelopmentTeamName = "Atsushi Kiwaki";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
