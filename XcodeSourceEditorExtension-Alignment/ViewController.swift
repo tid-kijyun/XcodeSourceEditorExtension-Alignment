@@ -52,7 +52,7 @@ class ViewController: NSViewController {
         return attrString
     }
 
-    private let def = UserDefaults(suiteName: "group.com.tid.Alignment-for-Xcode")
+    private let def = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") as? String ?? "")Alignment-for-Xcode")
 
     private var isAlignAssignment: Bool = true {
         didSet {

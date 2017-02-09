@@ -18,7 +18,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             return
         }
 
-        let def = UserDefaults(suiteName: "group.com.tid.Alignment-for-Xcode")
+        let def = UserDefaults(suiteName: "\(Bundle.main.object(forInfoDictionaryKey: "TeamIdentifierPrefix") as? String ?? "")Alignment-for-Xcode")
         let isEnableAssignment = def?.object(forKey: "KEY_ENABLE_ASSIGNMENT") as? Bool ?? true
         let isEnableTypeDeclaration = def?.object(forKey: "KEY_ENABLE_TYPE_DECLARATION") as? Bool ?? false
 
