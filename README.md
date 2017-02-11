@@ -17,6 +17,37 @@ This Xcode source editor extension align your assignment statement.
 2. Select your code
 3. Choose menu `Editor > Alignment`
 
+
+## Settings:
+![screen shot 2017-02-09 at 17 09 15](https://cloud.githubusercontent.com/assets/1665104/22777668/521450de-eef7-11e6-98a3-82fe4e1b9188.png)
+* Align assignment  
+  When checked, assignment statement align will be enabled.
+  
+  ```
+  let value = 0
+  let i = 0
+  ```
+  
+  ```
+  let value = 0
+  let i     = 0
+  ```
+  
+* Align type declaration  
+  When checked, type declaration align will be enabled.
+  
+  ```
+  func sort(from: Int,
+            to: Int) {
+  }
+  ```
+  
+  ```
+  func sort(from : Int,
+            to   : Int) {
+  }
+  ```
+
 ## Usage without installing:
 
 1. Install Xcode 8
