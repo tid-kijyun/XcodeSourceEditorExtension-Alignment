@@ -64,7 +64,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                     let whiteSpaces = String(repeating: " ", count: abs(repeatCount))
 
                     if repeatCount > 0 {
-                        invocation.buffer.lines.replaceObject(at: index, with: line.replacingOccurrences(of: "=", with: "\(whiteSpaces)="))
+                        invocation.buffer.lines.replaceObject(at: index, with: line.replacingOccurrences(of: "=", with: "\(whiteSpaces)=", options: [.regularExpression], range: line.startIndex..<line.index(line.startIndex, offsetBy: range.location+1)))
                     } else {
                         invocation.buffer.lines.replaceObject(at: index, with: line.replacingOccurrences(of: "\(whiteSpaces)=", with: "="))
                     }
