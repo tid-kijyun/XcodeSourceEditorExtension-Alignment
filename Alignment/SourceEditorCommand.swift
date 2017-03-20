@@ -23,12 +23,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let isEnableTypeDeclaration = def?.object(forKey: "KEY_ENABLE_TYPE_DECLARATION") as? Bool ?? false
 
         do {
-            if isEnableAssignment {
-                try alignAssignment(invocation: invocation, selection: selection)
-            }
-
             if isEnableTypeDeclaration {
                 try alignTypeDeclaration(invocation: invocation, selection: selection)
+            }
+
+            if isEnableAssignment {
+                try alignAssignment(invocation: invocation, selection: selection)
             }
         } catch {
             completionHandler(NSError(domain: "SampleExtension", code: -1, userInfo: [NSLocalizedDescriptionKey: ""]))
