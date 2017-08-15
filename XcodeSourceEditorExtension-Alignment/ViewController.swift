@@ -11,6 +11,7 @@ import Cocoa
 struct ConfigurationKey {
     static let EnableAssignment  = "KEY_ENABLE_ASSIGNMENT"
     static let EnableTypeDeclaration = "KEY_ENABLE_TYPE_DECLARATION"
+    static let EnableTypeObjectModel = "KEY_ENABLE_TYPE_OBJECT_MODEL"
 }
 
 let linkToGitHub = "https://github.com/tid-kijyun/XcodeSourceEditorExtension-Alignment"
@@ -23,6 +24,7 @@ extension NSButton {
 
 class ViewController: NSViewController {
     @IBOutlet weak var checkAlignAssignment: NSButton!
+    @IBOutlet weak var checkAlignObjectModel: NSButton!
     @IBOutlet weak var checkAlignTypeDeclaration: NSButton!
     @IBOutlet weak var warning: NSTextField!
     @IBOutlet weak var version: NSTextField! {
@@ -69,6 +71,14 @@ class ViewController: NSViewController {
             validateSettings()
         }
     }
+    
+    private var isAlignTypeObjectModel: Bool = false {
+        didSet {
+            checkAlignObjectModel.state = isAlignTypeObjectModel ? NSOnState : NSOffState
+            def?.set(isAlignTypeDeclaration, forKey: ConfigurationKey.EnableTypeObjectModel)
+            validateSettings()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,10 +90,11 @@ class ViewController: NSViewController {
     func load() {
         isAlignAssignment      = def?.object(forKey: ConfigurationKey.EnableAssignment) as? Bool ?? true
         isAlignTypeDeclaration = def?.object(forKey: ConfigurationKey.EnableTypeDeclaration) as? Bool ?? false
+        isAlignTypeObjectModel = def?.object(forKey: ConfigurationKey.EnableTypeObjectModel) as? Bool ?? false
     }
 
     func validateSettings() {
-        warning.isHidden = isAlignAssignment || isAlignTypeDeclaration
+        warning.isHidden = isAlignAssignment || isAlignTypeDeclaration || isAlignTypeObjectModel
     }
 
     override var representedObject: Any? {
@@ -98,5 +109,10 @@ class ViewController: NSViewController {
     }
     @IBAction func onCheckAlignTypeDeclaration(_ sender: NSButton) {
         isAlignTypeDeclaration = sender.isChecked
+    }
+    
+    @IBAction func onCheckAlignObjectModel(_ sender: NSButton) {
+        isAlignTypeObjectModel = sender.isChecked
+        
     }
 }
