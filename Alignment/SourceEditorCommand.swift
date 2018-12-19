@@ -45,19 +45,19 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let alignPosition = invocation.buffer.lines.enumerated().map { i, line -> Int in
             guard i >= selection.start.line && i <= selection.end.line,
                 let line = line as? String,
-                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
+                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.utf16.count)) else {
                     return 0
             }
-            return result.rangeAt(1).location
+            return result.range(at: 1).location
             }.max()
 
         for index in selection.start.line ... selection.end.line {
             guard let line = invocation.buffer.lines[index] as? String,
-                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
+                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.utf16.count)) else {
                     continue
             }
 
-            let range = result.rangeAt(2)
+            let range = result.range(at: 2)
             if range.location != NSNotFound {
                 let repeatCount = alignPosition! - range.location + 1
                 if repeatCount != 0 {
@@ -80,7 +80,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         let alignPosition1 = invocation.buffer.lines.enumerated().map { i, line -> Int in
             guard i >= selection.start.line && i <= selection.end.line,
                 let line = line as? String,
-                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.characters.count)) else {
+                let result = regex?.firstMatch(in: line, options: .reportProgress, range: NSRange(location: 0, length: line.utf16.count)) else {
                     return 0
             }
             return result.range.location

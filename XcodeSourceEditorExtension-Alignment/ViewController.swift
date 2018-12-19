@@ -17,7 +17,7 @@ let linkToGitHub = "https://github.com/tid-kijyun/XcodeSourceEditorExtension-Ali
 
 extension NSButton {
     var isChecked: Bool {
-        return self.state == NSOnState ? true : false
+        return self.state == .on ? true : false
     }
 }
 
@@ -42,11 +42,11 @@ class ViewController: NSViewController {
         let attrString = NSMutableAttributedString(string: text)
         let range = NSRange(location: 0, length: attrString.length)
         attrString.beginEditing()
-        attrString.addAttributes([
-                NSLinkAttributeName: url.absoluteString!,
-                NSForegroundColorAttributeName: NSColor.blue,
-                NSUnderlineStyleAttributeName:NSUnderlineStyle.styleSingle.rawValue
-            ], range: range)
+        attrString.addAttributes(convertToNSAttributedStringKeyDictionary([
+                convertFromNSAttributedStringKey(NSAttributedString.Key.link): url.absoluteString!,
+                convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): NSColor.blue,
+                convertFromNSAttributedStringKey(NSAttributedString.Key.underlineStyle):NSUnderlineStyle.single.rawValue
+            ]), range: range)
 
         attrString.endEditing()
         return attrString
@@ -56,7 +56,7 @@ class ViewController: NSViewController {
 
     private var isAlignAssignment: Bool = true {
         didSet {
-            checkAlignAssignment.state = isAlignAssignment ? NSOnState : NSOffState
+            checkAlignAssignment.state = isAlignAssignment ? .on : .off
             def?.set(isAlignAssignment, forKey: ConfigurationKey.EnableAssignment)
             validateSettings()
         }
@@ -64,7 +64,7 @@ class ViewController: NSViewController {
 
     private var isAlignTypeDeclaration: Bool = false {
         didSet {
-            checkAlignTypeDeclaration.state = isAlignTypeDeclaration ? NSOnState : NSOffState
+            checkAlignTypeDeclaration.state = isAlignTypeDeclaration ? .on : .off
             def?.set(isAlignTypeDeclaration, forKey: ConfigurationKey.EnableTypeDeclaration)
             validateSettings()
         }
@@ -99,4 +99,14 @@ class ViewController: NSViewController {
     @IBAction func onCheckAlignTypeDeclaration(_ sender: NSButton) {
         isAlignTypeDeclaration = sender.isChecked
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToNSAttributedStringKeyDictionary(_ input: [String: Any]) -> [NSAttributedString.Key: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
 }
