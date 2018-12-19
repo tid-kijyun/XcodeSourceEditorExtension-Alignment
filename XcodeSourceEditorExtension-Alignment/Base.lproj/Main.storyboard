@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
@@ -685,6 +685,17 @@
                                     <action selector="onCheckAlignTypeDeclaration:" target="XfG-lQ-9wD" id="Mql-zD-Qyu"/>
                                 </connections>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rU2-TG-GAj">
+                                <rect key="frame" x="223" y="101" width="168" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Align type ObjectModel " bezelStyle="regularSquare" imagePosition="left" inset="2" id="0QU-yf-j45">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onCheckAlignTypeDeclaration:" target="XfG-lQ-9wD" id="xp5-eK-VXo"/>
+                                </connections>
+                            </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIX-fj-dGy">
                                 <rect key="frame" x="223" y="155" width="130" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -737,7 +748,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANn-Ws-w77">
-                                <rect key="frame" x="223" y="106" width="232" height="17"/>
+                                <rect key="frame" x="223" y="76" width="232" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nothing happens with this setting." id="VND-Eo-cEt">
                                     <font key="font" metaFont="systemMedium" size="13"/>
@@ -753,6 +764,7 @@
                     </view>
                     <connections>
                         <outlet property="checkAlignAssignment" destination="tIX-fj-dGy" id="DLD-wl-wq2"/>
+                        <outlet property="checkAlignObjectModel" destination="rU2-TG-GAj" id="er4-i1-joS"/>
                         <outlet property="checkAlignTypeDeclaration" destination="reK-k9-VmC" id="gbz-FM-3Kt"/>
                         <outlet property="link" destination="XQz-KY-d24" id="sOp-zn-uch"/>
                         <outlet property="version" destination="rcV-h1-Zsq" id="utt-Gv-jg4"/>
