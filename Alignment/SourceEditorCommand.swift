@@ -84,7 +84,6 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     
     func align(invocation: XCSourceEditorCommandInvocation, selection: XCSourceTextRange, key:String) throws {
         var regex: NSRegularExpression?
-        let key = "<-"
         regex = try NSRegularExpression(pattern: " *\(key)", options: .caseInsensitive)
         
         let alignPosition1 = invocation.buffer.lines.enumerated().map { i, line -> Int in

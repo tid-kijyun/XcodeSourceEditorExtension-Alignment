@@ -74,7 +74,7 @@ class ViewController: NSViewController {
     
     private var isAlignTypeObjectModel: Bool = false {
         didSet {
-            checkAlignObjectModel.state = isAlignTypeObjectModel ? NSOnState : NSOffState
+            checkAlignObjectModel.state = isAlignTypeObjectModel ? .on : .off
             def?.set(isAlignTypeDeclaration, forKey: ConfigurationKey.EnableTypeObjectModel)
             validateSettings()
         }
