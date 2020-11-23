@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E50AC03256BBA4C00A3625E /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E50AC02256BBA4C00A3625E /* XcodeKit.framework */; };
+		1E50AC04256BBA4C00A3625E /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E50AC02256BBA4C00A3625E /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E6C02941D11C98C004D2B5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02931D11C98C004D2B5E /* AppDelegate.swift */; };
 		1E6C02961D11C98C004D2B5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02951D11C98C004D2B5E /* ViewController.swift */; };
 		1E6C02981D11C98C004D2B5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C02971D11C98C004D2B5E /* Assets.xcassets */; };
@@ -28,6 +30,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1E50AC05256BBA4C00A3625E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E50AC04256BBA4C00A3625E /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E6C02B81D11C995004D2B5E /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		1E13EAF91DBCB6AA0057352A /* AlignmentForXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlignmentForXcode.entitlements; sourceTree = SOURCE_ROOT; };
+		1E50AC02256BBA4C00A3625E /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		1E6C02901D11C98C004D2B5E /* AlignmentForXcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlignmentForXcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6C02931D11C98C004D2B5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E6C02951D11C98C004D2B5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6C02A91D11C995004D2B5E /* Cocoa.framework in Frameworks */,
+				1E50AC03256BBA4C00A3625E /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +127,7 @@
 		1E6C02A71D11C995004D2B5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E50AC02256BBA4C00A3625E /* XcodeKit.framework */,
 				1E6C02A81D11C995004D2B5E /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -165,6 +181,7 @@
 				1E6C02A21D11C995004D2B5E /* Sources */,
 				1E6C02A31D11C995004D2B5E /* Frameworks */,
 				1E6C02A41D11C995004D2B5E /* Resources */,
+				1E50AC05256BBA4C00A3625E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -393,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -441,7 +458,6 @@
 				DEVELOPMENT_TEAM = DP9Q5R8635;
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -458,7 +474,6 @@
 				DEVELOPMENT_TEAM = DP9Q5R8635;
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
